@@ -1,0 +1,214 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root{
+    --p-BrightOrange:hsl(31, 77%, 52%);
+    --p-DarkCyan:hsl(184, 100%, 22%);
+    --p-VeryDarkCyan:hsl(179, 100%, 13%);
+
+    --white-paragraphs:hsla(0, 0%, 100%, 0.75);
+    --bg-heading-btn-VeryLightGray: hsl(0, 0%, 95%);
+}
+
+/* 
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; 
+*/
+
+body{
+    background-color: var(--bg-heading-btn-VeryLightGray);
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 327px;
+    height: fit-content;
+    background-color: var(--p-BrightOrange);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 88px;
+    margin-bottom: 88px;
+}
+
+.card{
+    padding: 48px 48px 48px 48px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.sedan-section{
+    background-color: var(--p-BrightOrange);
+}
+
+.suv-section{
+    background-color: var(--p-DarkCyan);
+    height: 449px;
+    padding: 48px 48px 56px 48px;
+}
+
+.lux-section{
+    background-color: var(--p-VeryDarkCyan);
+    border-radius: 8px 8px 8px 8px;
+    margin-top: -8px;
+}
+
+h1{
+    color: var(--bg-heading-btn-VeryLightGray);
+    font-family: 'Big Shoulders Display';
+    font-size: 40px;
+    line-height: 47px;
+    margin-top: 35px;
+}
+
+p{
+    color: var(--white-paragraphs);
+    font-family: 'Lexend Deca';
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 25px;
+}
+
+button{
+    font-family:'Lexend Deca';
+    font-size: 15px;
+    width: 146px;
+    height: 48px;
+    border-radius: 48px;
+    outline: 0;
+    border: 0;
+    margin-top: 25px;
+    background-color: var(--bg-heading-btn-VeryLightGray);
+}
+
+.sedan-section button{
+    color: var(--p-BrightOrange);
+}
+
+.suv-section button{
+    color: var(--p-DarkCyan);
+}
+
+.lux-section button{
+    color: var(--p-VeryDarkCyan);
+}
+
+button:hover{
+    background-color: transparent;
+    color: var(--bg-heading-btn-VeryLightGray);
+    border: 2px solid white;
+}
+
+@media screen and (min-width: 950px){
+    body{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        width: 920px;
+        height: 500px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .card{
+        padding: 48px 48px 48px 48px;
+        border-radius: 8px 0px 0px 8px;
+        width: 33.33%;
+    }
+
+    .suv-section{
+        padding: 48px 48px 56px 48px;
+        height: 100%;
+        width: 314px;
+    }
+
+    .lux-section{
+        height: 100%;
+        margin-top: 0;
+        margin-left: -8px;
+        border-radius: 8px 8px 8px 8px;
+    }
+
+    button{
+        margin-top: 83px;
+    }
+}
